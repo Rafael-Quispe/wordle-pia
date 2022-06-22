@@ -1,49 +1,100 @@
-html,
-body {
-  background: var(--white);
-}
-
 :root {
-  --default: #121213;
-  --empty: #3a3a3c;
-  --wrong: #b59fb3;
-  --right: #538d4e;
+  --ff: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --clr-gray: #848486;
+  --clr-green: #00B724;
+  --clr-yellow: #B9CB01;
 }
 
-#game {
-display: grid;
-place-items: center;
-width: 100%;
-height: 600px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-rows: repeat(6, auto);
-  grid-template-columns: repeat(5, auto);
+body {
+  background-color: #01A4CB;
+  min-height: 100vh;
 }
 
-.box {
-  width: 60px;
-  height: 60px;
-  border: 1px solid var(--empty);
-  margin: 4px;
-  color: white;
+#cajas{
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  border-bottom: 2px solid green;
+  font-family: var(--ff);
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  padding-block: 1em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main-content {
+  height: 100%;
+}
+
+.row, .word-container {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  height: 4rem;
+  width: 4rem;
   text-transform: uppercase;
-  display: grid;
-  place-items: center;
-  font-size: 2;
 }
 
-.box.empty {
-  background: var(--empty);
-  }
-.box.wrong {
-  background: var(--wrong);
+input.col {
+  text-align: center;
+  font-size: 1.5rem;
+  border: solid ;
+  border-width: 1px;
 }
-.box.right {
-  background: var(--rigth);
+
+input.col:first-child {
+  border-left: 2px solid ;
 }
-.palabras {
- text-align: center;
+
+input.col:last-child {
+  border-right: 2px solid ;
+}
+
+.row button[type="submit"] {
+  display: none;
+}
+
+.alert {
+  border-radius: 100vmax;
+  font-family: var(--ff);
+  margin: 2.5rem auto;
+  padding: 2em;
+  width: fit-content;
+}
+
+.correc{
+  border: 2px solid green;
+}
+
+.wrong {
+  border: 2px solid red;
+}
+
+.hidden {
+  display: none;
+}
+a{
+  font-size: 25px;
+  color: white;
+  margin: auto;
+  font-family: Arial;
+  border-radius:10px;
+  background-color: red;
+  padding: 15px 30px;
+  margin: 150px 300px;
+  text-decoration: none;
+  margin-bottom: 500px;
 }
